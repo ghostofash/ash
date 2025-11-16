@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASH's SoundTrack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="ash.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "ash-dark": "#121212", 
+              "ash-accent": "#a0a0a0",
+              "ash-light": "#f3f4f6",
+              "ash-gray": "#282828", 
+              "ash-highlight": "#404040",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="antialiased">
+
+    <header
+      class="sticky top-0 z-50 bg-ash-dark/95 backdrop-blur-sm shadow-xl border-b border-ash-accent/20"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+
+          <a
+            href="#"
+            class="flex-shrink-0 text-xl font-extrabold tracking-widest text-ash-accent"
+          >
+            ASH's SoundTrack
+          </a>
+
+    
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="#profile"
+              class="text-sm font-medium hover:text-ash-accent transition duration-150"
+              >프로필</a
+            >
+            <a
+              href="#music"
+              class="text-sm font-medium hover:text-ash-accent transition duration-150"
+              >음악</a
+            >
+            <a
+              href="#concert"
+              class="text-sm font-medium hover:text-ash-accent transition duration-150"
+              >단독 콘서트</a
+            >
+            <a
+              href="#gallery"
+              class="text-sm font-medium hover:text-ash-accent transition duration-150"
+              >갤러리</a
+            >
+            <a
+              href="#contact"
+              class="text-sm font-medium hover:text-ash-accent transition duration-150"
+              >연락처</a
+            >
+          </nav>
+
+          <button
+            id="menu-button"
+            class="md:hidden text-ash-light focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-ash-dark pb-2 border-t border-ash-accent/20"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+          <a
+            href="#profile"
+            class="text-base font-medium hover:text-ash-accent block px-3 py-2 rounded-md"
+            >프로필</a
+          >
+          <a
+            href="#music"
+            class="text-base font-medium hover:text-ash-accent block px-3 py-2 rounded-md"
+            >음악</a
+          >
+          <a
+            href="#concert"
+            class="text-base font-medium hover:text-ash-accent block px-3 py-2 rounded-md"
+            >단독 콘서트</a
+          >
+          <a
+            href="#gallery"
+            class="text-base font-medium hover:text-ash-accent block px-3 py-2 rounded-md"
+            >갤러리</a
+          >
+          <a
+            href="#contact"
+            class="text-base font-medium hover:text-ash-accent block px-3 py-2 rounded-md"
+            >연락처</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인 컨텐츠 영역 -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- 1. 히어로 섹션 (Hero Section) -->
+      <section class="text-center py-20 md:py-32">
+        <h1
+          class="text-5xl md:text-7xl font-bold tracking-tight text-ash-light mb-4"
+        >
+          ASH ISLAND <span class="text-ash-accent">Discography</span>
+        </h1>
+        <p class="text-lg md:text-xl text-ash-accent/80 max-w-3xl mx-auto mb-8">
+          락킹한 트랩부터 감성적인 멜로디까지, 애쉬아일랜드의 모든 정규 앨범을
+          만나보세요.
+        </p>
+        <button
+          onclick="document.getElementById('music').scrollIntoView({ behavior: 'smooth' });"
+          class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-full text-ash-dark bg-ash-accent shadow-xl shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+        >
+          음악 탐색 시작하기
+        </button>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- 2. 프로필 섹션 (Profile) -->
+      <section id="profile" class="py-16">
+        <h2
+          class="text-4xl font-extrabold text-center mb-12 border-b-2 border-ash-accent/50 pb-2 inline-block mx-auto"
+        >
+          아티스트 프로필
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- 이미지 (Placeholder) -->
+          <div class="rounded-xl overflow-hidden shadow-2xl">
+            <img
+              src="prof.jpg"
+              alt="애쉬아일랜드 프로필 이미지"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x600/1e1e1e/a0a0a0?text=이미지+불러오기+실패';"
+              class="w-full h-auto object-cover rounded-xl transition duration-500 ease-in-out hover:scale-[1.01]"
+            />
+          </div>
+
+          <!-- 상세 정보 -->
+          <div class="space-y-6">
+            <p class="text-2xl font-semibold text-ash-accent">
+              ASH ISLAND (애쉬 아일랜드)
+            </p>
+            <ul class="space-y-3 text-lg text-ash-light/80">
+              <li class="flex items-center">
+                <span class="font-bold w-24 text-ash-accent">본명</span>
+                <span class="text-ash-light">윤진영</span>
+              </li>
+              <li class="flex items-center">
+                <span class="font-bold w-24 text-ash-accent">출생</span>
+                <span class="text-ash-light">1999년 8월 11일</span>
+              </li>
+              <li class="flex items-center">
+                <span class="font-bold w-24 text-ash-accent">레이블</span>
+                <span class="text-ash-light">MiDNiGHT Records</span>
+              </li>
+              <li class="flex items-center">
+                <span class="font-bold w-24 text-ash-accent">데뷔</span>
+                <span class="text-ash-light">2018년 싱글 'How R U'</span>
+              </li>
+              <li class="flex items-center">
+                <span class="font-bold w-24 text-ash-accent">수상 경력</span>
+                <span class="text-ash-light">2020년 한국힙합어워즈 올해의 신인 아티스트상</span>
+              </li>
+              <li class="flex items-center">
+                <span class="font-bold w-24 text-ash-accent"></span>
+                <span class="text-ash-light">2021년 제13회 멜론 뮤직 어워드 TOP10</span>
+              </li>
+              <li class="flex items-center">
+                <span class="font-bold w-24 text-ash-accent"></span>
+                <span class="text-ash-light">2021년 엠넷 아시안 뮤직 어워드 베스트 힙합 어반 뮤직상</span>
+              </li>
+              <li class="flex items-center">
+                <span class="font-bold w-24 text-ash-accent"></span>
+                 <span class="text-ash-light">2023년 아시아 아티스트 어워즈 뉴웨이브상</span>
+              </li>
+            </ul>
+            <p
+              class="pt-4 text-ash-light/90 leading-relaxed border-t border-ash-accent/30"
+            >
+              ASH ISLAND는 대한민국의 래퍼이자 싱어송라이터이다. 
+              2018년 11월, 싱글 'How R U'와 'DEADSTAR'에 이어 첫 번째 데뷔 앨범 [ASH]를 발표, 
+              본격적인 커리어를 쌓으면서 'More ASH', 'Empty Head', 'Error (Feat. Loopy)' 등 여러 싱글을 쏟아냈다. 
+              두 번째 정규작인 [ISLAND]를 통해 '멜로디'에서 '그랑프리', 'One More Night'까지 이어지는 세 타이틀곡을 선보이며 많은 사랑을 받았고, 
+              2023년에는 세 번째 정규 앨범 [ROSE]와 EP [More ROSES]를 잇따라 공개해 찬사를 받았다. 
+              이듬해 앰비션 뮤직과의 전속 계약 종료 후 자신의 미드나잇 레코즈(Midnight Records)를 설립, 
+              독립적인 음악 활동을 시작하며 4집 [Voice Memo]를 통해 음악적 성장과 진솔한 감정을 담아냈다.
+
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- 3. 음악 섹션 (Music) -->
+      <section id="music" class="py-16">
+        <h2
+          class="text-4xl font-extrabold text-center mb-12 border-b-2 border-ash-accent/50 pb-2 inline-block mx-auto"
+        >
+          디스코그래피
+        </h2>
+
+        <!-- 정규 앨범 목록 -->
+        <h3
+          class="text-3xl font-bold text-ash-light mb-8 border-l-4 border-ash-accent pl-3"
+        >
+          정규 앨범 (Full Length Albums)
+        </h3>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16">
+          <!-- 앨범 카드 1: ASH (정규 1집) -->
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('ash')"
+          >
+            <div>
+              <img
+                src="pa.jpg"
+                alt="ASH 정규 1집 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">ASH</h3>
+              <p class="text-sm text-ash-light/70 mb-3">
+                정규 1집 (2019.03.22)
+              </p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                ASH ISLAND 1st Studio Album [ ASH ]
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10265005"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <!-- 앨범 카드 2: ISLAND (정규 2집) -->
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('island')"
+          >
+            <div>
+              <img
+                src="is.jpg"
+                alt="ISLAND 정규 2집 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">ISLAND</h3>
+              <p class="text-sm text-ash-light/70 mb-3">
+                정규 2집 (2021.03.05)
+              </p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                ASH ISLAND 2rd Studio Album [ ISLAND ]
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10574045"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <!-- 앨범 카드 3: ROSE (정규 3집) -->
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('rose')"
+          >
+            <div>
+              <img
+                src="r.jpg"
+                alt="ROSE 정규 3집 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">ROSE</h3>
+              <p class="text-sm text-ash-light/70 mb-3">
+                정규 3집 (2023.05.03)
+              </p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                ASH ISLAND 3rd Studio Album [ ROSE ]
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=11236489"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <!-- 앨범 카드 4: Voice Memo (정규 4집) -->
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('voicememo')"
+          >
+            <div>
+              <img
+                src="vm.jpg"
+                alt="Voice Memo 정규 4집 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">Voice Memo</h3>
+              <p class="text-sm text-ash-light/70 mb-3">정규 4집 (2025.03.12)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                내 목소리로 남긴, 나의 기록 (2018-2024)
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=11734173"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-divider my-8"></div>
+
+        <!-- More Series 목록 -->
+        <h3
+          class="text-3xl font-bold text-ash-light mb-8 border-l-4 border-ash-accent pl-3"
+        >
+           More 시리즈 (More Series Albums)
+        </h3>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <!-- 싱글 카드 1: More ASH -->
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('more_ash')"
+          >
+            <div>
+              <img
+                src="ma.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                More ASH
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">More 시리즈 (2019.07.11)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                정규 1집 [ASH] 발매 후 공개된 스페셜 앨범.
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10271429"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <!-- 싱글 카드 2: More island -->
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('more_island')"
+          >
+            <div>
+              <img
+                src="mi.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">More ISLAND</h3>
+              <p class="text-sm text-ash-light/70 mb-3">More 시리즈 (2021.06.28)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                정규 2집 [ISLAND] 발매 후 공개된 스페셜 앨범.
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10602336"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <!-- 싱글 카드 3: More ROSE (NEW) -->
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('more_rose')"
+          >
+            <div>
+              <img
+                src="mr.jpg"
+                alt="More ROSE 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">More ROSES</h3>
+              <p class="text-sm text-ash-light/70 mb-3">More 시리즈 (2023.07.13)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                정규 3집 [ROSE]의 감성을 이어받은 스페셜 앨범이자 마지막 More 시리즈.
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=11294303"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-divider my-8"></div>
+
+        <!-- EP 목록 -->
+        <h3
+          class="text-3xl font-bold text-ash-light mb-8 border-l-4 border-ash-accent pl-3"
+        >
+           EP 앨범 (Extended Play Albums)
+        </h3>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <!-- EP 카드 1: BURN -->
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('BURN')"
+          >
+            <div>
+              <img
+                src="BURN_preview.png"
+                alt="BURN 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                BURN
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">EP Part 01 (2025.12.XX)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                ???
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="링크"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="section-divider my-8"></div>
+
+        <!-- 싱글 목록 -->
+        <h3
+          class="text-3xl font-bold text-ash-light mb-8 border-l-4 border-ash-accent pl-3"
+        >
+           싱글 앨범 (Single Albums)
+        </h3>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <!-- 싱글 카드 1: HOW R U -->
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('HOWRU')"
+          >
+            <div>
+              <img
+                src="hu.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                HOW R U
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2018.11.12)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                "Clloud" 또는 "윤진영"으로 알려진 "ASH ISLAND"의 첫 싱글 How R U
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10221199"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('DEADSTAR')"
+          >
+            <div>
+              <img
+                src="ds.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                DEADSTAR
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2018.11.21)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                앰비션 뮤직의 새 아티스트 "ASH ISLAND" 의 시작을 알리는 싱글
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10224684"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('Bitionboyz')"
+          >
+            <div>
+              <img
+                src="bb.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                Bition Boyz
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2019.05.12)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                Ambition Musik Presents “Bition Boyz”
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10283621"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('Paranoidremix')"
+          >
+            <div>
+              <img
+                src="pr.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                Paranoid Remix
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2019.06.02)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                CHANGMO 와 Paul Blanco가 참여한 "Paranoid Remix"
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10293013"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('band')"
+          >
+            <div>
+              <img
+                src="band.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                BAND
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2019.06.08)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                Ambition Musik Presents “BAND”
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10294820"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('beer')"
+          >
+            <div>
+              <img
+                src="beer.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                Dingo X Ambition Musik
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2019.06.28)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                [Dingo X Ambition Musik]
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10301186"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('Bitionway')"
+          >
+            <div>
+              <img
+                src="bw.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                BITION WAY
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2019.10.27)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                Ambition Musik Presents “BITION WAY”
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10344096"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('emptyhead')"
+          >
+            <div>
+              <img
+                src="eh.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                Empty Head
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2019.11.13)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                 I feel like …
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10350986"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('error')"
+          >
+            <div>
+              <img
+                src="er.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                Error
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2020.07.02)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                I can’t get you outta my head.
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10454538"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('melody')"
+          >
+            <div>
+              <img
+                src="melody.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                멜로디              
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2021.02.25)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                "ISLAND" COMING SOON
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10570193"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('carabiner')"
+          >
+            <div>
+              <img
+                src="carabiner.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                잡아줄게 (Carabiner)
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2021.07.09)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                [Music Project with Ambush x Gentle Monster]
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10648167"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('play')"
+          >
+            <div>
+              <img
+                src="play.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                Play
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2021.10.01)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                Play music, Google play
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10729024"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('Because')"
+          >
+            <div>
+              <img
+                src="bc.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                Because
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2022.01.25)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                내려두고 갈게 나 여기에
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=10849216"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('Everything')"
+          >
+            <div>
+              <img
+                src="everything.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                Everything
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2022.11.08)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                Tell me everything
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=11096576"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('Iremember')"
+          >
+            <div>
+              <img
+                src="ir.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                I remember
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2023.06.29)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                I remember that day
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=11275456"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('StayWithMe')"
+          >
+            <div>
+              <img
+                src="staywithme.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                Stay With Me
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2023.12.18)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                미리 메리 크리스마스 ♥
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=11385652"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('20')"
+          >
+            <div>
+              <img
+                src="20.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                20
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2024.06.26)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                The stars are coming up
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=11519851#cmtpgn=&pageNo=2&sortType=0&srchType=2&srchWord="
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('OST')"
+          >
+            <div>
+              <img
+                src="ost.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                OST
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2024.07.12)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                Our Sound Track ♥
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=11538312"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('idontwannabeyourhero')"
+          >
+            <div>
+              <img
+                src="idon.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                I don't wanna be your hero
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2024.11.29)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                “ ? “ coming soon
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://placeholder.spotify.com/more_island"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('ghostofyou')"
+          >
+            <div>
+              <img
+                src="goy.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                생각이 나서
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2025.02.10)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                4th Album Coming Soon. Stay Tuned.
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=11710673"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('alwaysagoodtime')"
+          >
+            <div>
+              <img
+                src="alwaysagoodtime.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                WSWF Original Vol.1
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2025.05.27)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                Mnet Original Dance Series
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=11825861"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('forever')"
+          >
+            <div>
+              <img
+                src="forever.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                FOREVER
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2025.08.18)</p>
+              <p  
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                “세상은 넓고, 좋은 노래는 많다.”
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=12051643"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="album-card bg-ash-gray/50 border border-ash-accent/10 rounded-xl p-4 md:p-6 shadow-xl flex flex-col justify-between"
+            onclick="openModal('어쩌다마주친그대')"
+          >
+            <div>
+              <img
+                src="어쩌다마주친그대.jpg"
+                alt="More ASH 앨범 커버"
+                class="w-full h-auto rounded-lg mb-4 object-cover aspect-square"
+              />
+              <h3 class="text-xl font-bold text-ash-accent mb-1">
+                어쩌다 마주친 그대
+              </h3>
+              <p class="text-sm text-ash-light/70 mb-3">싱글 (2025.10.26)</p>
+              <p
+                class="text-sm text-ash-light/90 mb-4 h-12 overflow-hidden text-ellipsis line-clamp-2"
+              >
+                '더 리슨: 오늘, 너에게 닿다' 다섯 번째 트랙
+              </p>
+            </div>
+            <div class="flex flex-col space-y-2 mt-4">
+              <button
+                class="bg-ash-accent text-ash-dark px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-ash-accent/30 hover:bg-ash-light transform hover:scale-[1.02] transition duration-300"
+              >
+                자세히 보기 (트랙리스트)
+              </button>
+              <a
+                href="https://www.melon.com/album/detail.htm?albumId=12176297"
+                target="_blank"
+                class="text-xs text-blue-400 hover:text-blue-300 transition duration-150 text-center border border-blue-400/50 py-2 rounded-xl hover:bg-ash-highlight/50"
+              >
+                Melon에서 듣기
+              </a>
+            </div>
+          </div>
+          
+
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- 4. 단독 콘서트 섹션 (Solo Concert) -->
+      <section id="concert" class="py-16">
+        <h2
+          class="text-4xl font-extrabold text-center mb-12 border-b-2 border-ash-accent/50 pb-2 inline-block mx-auto"
+        >
+          단독 콘서트
+        </h2>
+
+        <!-- 콘서트 정보 카드 그리드 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <!-- 콘서트 카드 1 -->
+          <div class="bg-ash-gray rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+            <div class="bg-cover bg-center relative group overflow-hidden aspect-[3/4]">
+              <img
+                src="ps.png"
+                alt="Voice Memo: Black Rose 콘서트 포스터"
+                class="w-full h-full object-cover transition duration-300 ease-in-out"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-ash-light">Voice Memo : Black Rose</h3>
+              <div class="space-y-2 text-ash-accent mb-4">
+                <p class="flex items-center"><span class="mr-2">📅</span> 2025년 4월 5일</p>
+                <p class="flex items-center"><span class="mr-2">🕐</span> 오후 5시</p>
+                <p class="flex items-center"><span class="mr-2">📍</span> KBS Arena</p>
+              </div>
+              <p class="text-ash-light/80 mb-4">애쉬 아일랜드 첫 번째 단독 콘서트 ［Voice Memo : Black Rose］</p>
+              <a
+                href="https://tickets.interpark.com/goods/25002351"
+                target="_blank"
+                class="w-full block text-center bg-ash-accent text-ash-dark font-bold py-2 px-4 rounded hover:bg-ash-accent/80 transition duration-200"
+              >
+                티켓 예매
+              </a>
+            </div>
+          </div>
+
+          <!-- 콘서트 카드 2 -->
+          <div class="bg-ash-gray rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+            <div class="bg-cover bg-center relative group overflow-hidden aspect-[3/4]">
+              <img
+                src="burn_poster.png"
+                alt="BURN 콘서트 포스터"
+                class="w-full h-full object-cover transition duration-300 ease-in-out"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-ash-light">BURN</h3>
+              <div class="space-y-2 text-ash-accent mb-4">
+                <p class="flex items-center"><span class="mr-2">📅</span> 2026년 1월 3일 & 1월 4일</p>
+                <p class="flex items-center"><span class="mr-2">🕐</span> 오후 6시 & 오후 5시</p>
+                <p class="flex items-center"><span class="mr-2">📍</span> Olympic Hall</p>
+              </div>
+              <p class="text-ash-light/80 mb-4">2026 ASH ISLAND SOLO CONCERT 〈BURN〉</p>
+              <a
+                href="https://tickets.interpark.com/goods/25016098"
+                target="_blank"
+                class="w-full block text-center bg-ash-accent text-ash-dark font-bold py-2 px-4 rounded hover:bg-ash-accent/80 transition duration-200"
+              >
+                티켓 예매
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- 5. 갤러리 섹션 (Gallery) -->
+      <section id="gallery" class="py-16">
+        <h2
+          class="text-4xl font-extrabold text-center mb-12 border-b-2 border-ash-accent/50 pb-2 inline-block mx-auto"
+        >
+          갤러리
+        </h2>
+
+        <!-- 반응형 갤러리 그리드 -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="overflow-hidden rounded-lg shadow-xl aspect-square">
+            <img
+              src="p1.jpg"
+              alt="갤러리 이미지 1"
+              class="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105"
+            />
+          </div>
+          <div class="overflow-hidden rounded-lg shadow-xl aspect-square">
+            <img
+              src="p2.jpg"
+              alt="갤러리 이미지 2"
+              class="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105"
+            />
+          </div>
+          <div class="overflow-hidden rounded-lg shadow-xl aspect-square">
+            <img
+              src="p3.jpg"
+              alt="갤러리 이미지 3"
+              class="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105"
+            />
+          </div>
+          <div class="overflow-hidden rounded-lg shadow-xl aspect-square">
+            <img
+              src="p4.webp"
+              alt="갤러리 이미지 4"
+              class="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105"
+            />
+          </div>
+          <div class="overflow-hidden rounded-lg shadow-xl aspect-square">
+            <img
+              src="p5.jpg"
+              alt="갤러리 이미지 5"
+              class="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105"
+            />
+          </div>
+          <div class="overflow-hidden rounded-lg shadow-xl aspect-square">
+            <img
+              src="p6.jpg"
+                           alt="갤러리 이미지 6"
+              class="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105"
+            />
+          </div>
+          <div class="overflow-hidden rounded-lg shadow-xl aspect-square">
+            <img
+              src="p7.jpg"
+              alt="갤러리 이미지 7"
+              class="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105"
+            />
+          </div>
+          <div class="overflow-hidden rounded-lg shadow-xl aspect-square">
+            <img
+              src="p8.jpg"
+              alt="갤러리 이미지 8"
+              class="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <p class="text-center text-ash-light/70 mt-8">
+          더 많은 사진은 공식 SNS를 확인해주세요.
+        </p>
+      </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer
+      id="contact"
+      class="bg-ash-dark border-t border-ash-accent/20 mt-12 py-8"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-ash-accent mb-4 text-lg font-semibold">
+          ASH ISLAND Official Links
+        </p>
+        <div class="flex justify-center space-x-6">
+          <!-- 인스타그램 아이콘 -->
+          <a
+            href="https://www.instagram.com/ash.island/"
+            target="_blank"
+            class="text-ash-light hover:text-ash-accent transition duration-150"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.25.148 4.67 1.6 4.818 4.821.058 1.264.07 1.644.07 4.849 0 3.203-.012 3.583-.07 4.849-.149 3.22-1.569 4.67-4.818 4.819-1.265.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.25-.149-4.67-1.6-4.819-4.82-.058-1.264-.07-1.644-.07-4.848 0-3.204.012-3.584.07-4.849.149-3.22 1.569-4.67 4.819-4.819 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.266 0-3.652.011-4.929.07a7.276 7.276 0 00-2.316.452 7.275 7.275 0 00-1.748 1.054 7.275 7.275 0 00-1.054 1.748 7.276 7.276 0 00-.452 2.316c-.059 1.277-.07 1.663-.07 4.929s.011 3.652.07 4.929c.048 1.258.193 2.197.452 3.033.245.748.577 1.411 1.054 1.956.477.545 1.139.878 1.956 1.053.836.259 1.775.404 3.033.452 1.277.059 1.663.07 4.929.07s3.652-.011 4.929-.07c1.258-.048 2.197-.193 3.033-.452.748-.245 1.411-.577 1.956-1.054.545-.477.878-1.139 1.053-1.956.259-.836.404-1.775.452-3.033.059-1.277.07-1.663.07-4.929s-.011-3.652-.07-4.929c-.048-1.258-.193-2.197-.452-3.033-.245-.748-.577-1.411-1.054-1.956-.477-.545-1.139-.878-1.956-1.054-.836-.259-1.775-.404-3.033-.452-1.277-.059-1.663-.07-4.929-.07zm0 14.868c-1.854 0-3.362-1.508-3.362-3.362s1.508-3.362 3.362-3.362 3.362 1.508 3.362 3.362-1.508 3.362-3.362 3.362zm0-8.651c-2.91 0-5.289 2.379-5.289 5.289s2.379 5.289 5.289 5.289 5.289-2.379 5.289-5.289-2.379-5.289-5.289-5.289zm5.404-1.127c-.642 0-1.162.52-1.162 1.162s.52 1.162 1.162 1.162 1.162-.52 1.162-1.162-.52-1.162-1.162-1.162z"
+              />
+            </svg>
+          </a>
+          <!-- 유튜브 아이콘 -->
+          <a
+            href="https://www.youtube.com/@JustAsh1999"
+            target="_blank"
+            class="text-ash-light hover:text-ash-accent transition duration-150"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.615 3.195a2.645 2.645 0 00-1.879-1.879C16.488 1 12 1 12 1s-4.488 0-5.736.316a2.645 2.645 0 00-1.88 1.879C4 4.412 4 8.899 4 12c0 3.101 0 7.588.316 8.805a2.645 2.645 0 001.88 1.879C7.512 23 12 23 12 23s4.488 0 5.736-.316a2.645 2.645 0 001.88-1.879C20 19.588 20 15.101 20 12c0-3.101 0-7.588-.385-8.805zM9.827 15.65v-7.3l5.043 3.65-5.043 3.65z"
+              />
+            </svg>
+          </a>
+          <!-- 트위터 아이콘 (X 로고) -->
+          <a
+            href="https://twitter.com/ashisland_99"
+            target="_blank"
+            class="text-ash-light hover:text-ash-accent transition duration-150"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.901 1.139h3.793l-8.435 9.778 9.878 12.083h-7.854l-6.529-8.498-7.973 8.498h-3.793l8.756-9.351-9.351-11.411h8.17l5.698 7.373 6.903-7.373zm-2.901 2.238l-7.794 10.152-1.742-1.722-6.052 7.828h2.09l5.056-6.561 7.239 9.351h-7.854l-6.529-8.498-7.973 8.498h-3.793l8.756-9.351-9.351-11.411h8.17l5.698 7.373 6.903-7.373zm-2.901 2.238l-7.794 10.152-1.742-1.722-6.052 7.828h2.09l5.056-6.561 7.239 9.351h-2.152l-5.698-7.373-8.081 10.493h10.05l7.973-10.493h-2.09l-7.239 9.351 7.794-10.152zm-12.75 0h2.09l8.435 9.778-2.09-2.583z"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="text-xs text-ash-accent/50 mt-4">
+          &copy; 2025 @forusastrid | All data is based on
+          publicly available discography.
+        </p>
+      </div>
+    </footer>
+
+    <!-- 앨범 상세 정보 모달 (Modal) -->
+    <div
+      id="album-modal"
+      class="fixed inset-0 hidden modal-overlay items-center justify-center p-4"
+    >
+      <div
+        class="bg-ash-gray rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform transition-all duration-300"
+      >
+        <!-- 모달 헤더 -->
+        <div
+          class="p-6 md:p-8 flex justify-between items-start border-b border-ash-accent/20 sticky top-0 bg-ash-gray/95 backdrop-blur-sm z-10"
+        >
+          <div class="flex items-center space-x-4">
+            <!-- 앨범 커버 (플레이스홀더) -->
+            <div
+              id="modal-album-cover"
+              class="w-16 h-16 bg-ash-dark rounded-md flex items-center justify-center text-xs text-ash-accent flex-shrink-0"
+            ></div>
+            <div>
+              <h3
+                id="modal-album-title"
+                class="text-3xl font-bold text-ash-light"
+              ></h3>
+              <p
+                id="modal-album-details"
+                class="text-ash-accent/80 text-sm"
+              ></p>
+            </div>
+          </div>
+          <button
+            onclick="closeModal()"
+            class="text-ash-accent hover:text-ash-light transition duration-150 p-2 rounded-full hover:bg-ash-highlight flex-shrink-0"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 모달 바디 (내용) -->
+        <div class="p-6 md:p-8">
+          <div
+            id="modal-album-description"
+            class="text-ash-light/90 mb-6 pb-4 border-b border-ash-accent/10 leading-relaxed"
+          ></div>
+
+          <h4 class="text-xl font-semibold text-ash-accent mb-4">트랙리스트</h4>
+          <div id="modal-tracklist" class="space-y-2">
+            <!-- 트랙리스트가 여기에 동적으로 삽입됩니다. -->
+          </div>
+
+          <!-- 스트리밍 버튼 -->
+          <div
+            class="mt-8 pt-6 border-t border-ash-accent/10 flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4"
+          >
+            <a
+              id="modal-link-spotify"
+              target="_blank"
+              class="w-full md:w-auto flex-1 text-center bg-green-600 text-white px-4 py-3 rounded-xl font-bold shadow-lg hover:bg-green-500 transform hover:scale-[1.01] transition duration-200"
+            >
+              <svg
+                class="w-5 h-5 inline mr-2 -mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zM8.5 7.5a.5.5 0 01.5-.5h7a.5.5 0 01.5.5v9a.5.5 0 01-.5.5h-7a.5.5 0 01-.5-.5v-9zM12 2a10 10 0 100 20A10 10 0 0012 2zm0 17.5a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v11z"
+                />
+              </svg>
+              Spotify에서 듣기
+            </a>
+            <a
+              id="modal-link-applemusic"
+              target="_blank"
+              class="w-full md:w-auto flex-1 text-center bg-white text-ash-dark px-4 py-3 rounded-xl font-bold shadow-lg hover:bg-gray-200 transform hover:scale-[1.01] transition duration-200"
+            >
+              <svg
+                class="w-5 h-5 inline mr-2 -mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.758 11.968c-.01-5.184-4.223-9.368-9.458-9.368-5.234 0-9.447 4.184-9.458 9.368v.001a1.002 1.002 0 00.013.993c.123.151.272.296.444.428.796.61 1.77 1.405 2.766 2.385 1.042 1.03 2.072 2.155 2.072 3.864 0 1.954-1.373 2.515-2.072 2.515-.811 0-1.282-.44-1.282-1.328 0-.916.634-1.35 1.574-1.35.91 0 1.258.462 1.258 1.157 0 .548-.12.871-.247 1.094-.144.252-.352.477-.6.643-.248.166-.522.288-.8.361-1.01.26-2.043-.102-2.793-1.043-.75-1.016-1.077-2.333-.94-3.619.14-1.298.59-2.52 1.34-3.523.75-1.003 1.76-1.784 2.92-2.342 1.16-.558 2.508-.94 3.96-.94 1.451 0 2.799.382 3.96.94 1.16.558 2.17 1.339 2.92 2.342.75 1.003 1.2 2.225 1.34 3.523.137 1.286-.194 2.503-.94 3.619-.75 1.016-1.782 1.303-2.793 1.043-.278-.073-.552-.195-.8-.361-.248-.166-.456-.391-.6-.643-.127-.223-.247-.546-.247-1.094 0-.695.348-1.157 1.258-1.157.94 0 1.574.434 1.574 1.35 0 .888-.471 1.328-1.282 1.328-.7 0-2.072-.56-2.072-2.515 0-1.709 1.03-2.834 2.072-3.864.996-.98 1.97-1.775 2.766-2.385.172-.132.321-.277.444-.428a1.002 1.002 0 00.013-.993v-.001z"
+                />
+              </svg>
+              Apple Music에서 듣기
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BURN 콘서트 D-day 팝업 (자동 표시) -->
+    <div id="burn-countdown-popup" class="fixed inset-0 hidden items-center justify-center p-4 z-50 burn-popup">
+      <div class="bg-ash-gray rounded-xl shadow-2xl w-full max-w-md mx-auto p-6 text-center burn-popup-inner">
+        <div class="flames" aria-hidden>
+          <span class="flame f1"></span><span class="flame f2"></span><span class="flame f3"></span>
+          <span class="flame f4"></span><span class="flame f5"></span>
+        </div>
+         <div class="flex justify-between items-start mb-4">
+           <h3 class="text-2xl font-bold text-ash-light">ASH ISLAND SOLO CONCERT〈BURN〉D-DAY</h3>
+           <button id="burn-popup-close" class="text-ash-accent hover:text-ash-light p-2 rounded">
+             ✕
+           </button>
+         </div>
+         <div class="mb-4">
+           <img src="burn_poster.png" alt="BURN 포스터" class="mx-auto w-40 h-auto object-cover rounded" />
+         </div>
+         <p class="text-ash-accent mb-3">다음 콘서트까지 남은 시간</p>
+         <div id="burn-countdown" class="text-4xl font-bold text-ash-light mb-4">--일</div>
+         <div class="flex gap-3">
+          <a id="burn-ticket-btn" href="https://tickets.interpark.com/goods/25016098" target="_blank" class="flex-1 burn-ticket-btn font-bold py-2 px-3 rounded">
+             티켓 예매
+           </a>
+           <button id="burn-popup-dismiss" class="flex-1 border border-ash-accent text-ash-accent py-2 px-3 rounded hover:bg-ash-highlight/30">
+             닫기
+           </button>
+         </div>
+       </div>
+     </div>
+
+    <script src="ash.js"></script>
+  </body>
+</html>
